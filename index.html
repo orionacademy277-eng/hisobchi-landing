@@ -1,12 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uz">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hisobchi AI Business — Telegram'dagi AI hisobchingiz</title>
-<meta name="description" content="Do'kon va savdo bizneslari uchun. Xodimingiz ovozli xabar yuboradi — savdo yoziladi. Siz so'raysiz — javob olasiz. Hech qanday dastur o'rnatilmaydi.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hisobchi AI Business — Telegram'dagi AI hisobchingiz</title>
+    <meta
+      name="description"
+      content="Do'kon va savdo bizneslari uchun. Xodimingiz ovozli xabar yuboradi — savdo yoziladi. Siz so'raysiz — javob olasiz. Hech qanday dastur o'rnatilmaydi."
+    />
 
-<!-- ============================================================
+    <!-- ============================================================
      META PIXEL — paste your pixel code here and replace YOUR_PIXEL_ID.
      The form submit handler already calls fbq('track','Lead') if fbq exists.
 <script>
@@ -20,705 +23,1533 @@ fbq('track', 'PageView');
 </script>
 ============================================================ -->
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-<style>
-:root{
-  --accent:#17A34A;
-  --accent-dark:#128A3E;
-  --accent-soft:#E8F7EE;
-  --ink:#0F1B14;
-  --muted:#5B6B62;
-  --line:#E4EBE6;
-  --bg-alt:#F5F9F6;
-  --radius:16px;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--ink);background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
-section{padding:56px 0;position:relative;overflow:hidden}
-@media(min-width:768px){section{padding:88px 0}}
-
-h1{font-size:clamp(1.65rem,5.5vw,2.9rem);font-weight:800;line-height:1.15;letter-spacing:-.02em}
-h2{font-size:clamp(1.45rem,4.5vw,2.2rem);font-weight:800;line-height:1.2;letter-spacing:-.02em;text-align:center;margin-bottom:36px}
-.sub{color:var(--muted);font-size:clamp(1rem,3vw,1.15rem);margin-top:14px}
-
-/* buttons */
-.btn{display:inline-block;background:var(--accent);color:#fff;font-weight:700;font-size:1.05rem;border:none;border-radius:12px;padding:16px 34px;cursor:pointer;text-align:center;transition:background .15s, transform .1s;box-shadow:0 6px 18px rgba(23,163,74,.28)}
-.btn:hover{background:var(--accent-dark)}
-.btn:active{transform:scale(.98)}
-.btn-block{width:100%}
-.section-cta{text-align:center;margin-top:36px}
-
-/* header */
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
-.logo{font-weight:800;font-size:1.15rem;letter-spacing:-.02em}
-.logo span{color:var(--accent)}
-.nav .btn{padding:9px 20px;font-size:.92rem;box-shadow:none}
-
-/* hero */
-.hero{padding:36px 0 56px;background:radial-gradient(900px 480px at 82% 8%,rgba(23,163,74,.08),transparent 62%)}
-.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(15,27,20,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(15,27,20,.04) 1px,transparent 1px);background-size:44px 44px;-webkit-mask-image:radial-gradient(ellipse 80% 90% at 70% 10%,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse 80% 90% at 70% 10%,#000 30%,transparent 75%);pointer-events:none}
-.hero-grid{display:grid;gap:36px}
-@media(min-width:900px){.hero{padding:72px 0 96px}.hero-grid{grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}}
-
-/* form */
-.lead-form{margin-top:24px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:0 10px 30px rgba(15,27,20,.06);max-width:440px}
-.lead-form input{width:100%;padding:14px 16px;font-size:1rem;font-family:inherit;border:1.5px solid var(--line);border-radius:12px;margin-bottom:10px;outline:none;transition:border .15s}
-.lead-form input:focus{border-color:var(--accent)}
-.form-note{font-size:.86rem;color:var(--muted);margin-top:10px;text-align:center}
-.form-success{display:none;text-align:center;padding:26px 10px}
-.form-success .check{width:52px;height:52px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-size:1.6rem;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
-.form-success p{font-weight:600}
-
-/* phone mockup — iPhone 17 Pro frame */
-.phone{position:relative;width:272px;max-width:76vw;margin:0 auto;background:#0b0c0e;border:4px solid #4b4e55;border-radius:62px;padding:9px;box-shadow:0 30px 70px rgba(15,27,20,.30),0 2px 6px rgba(0,0,0,.25),inset 0 0 0 1px rgba(255,255,255,.06)}
-.phone::after{content:"";position:absolute;inset:9px;border-radius:47px;background:linear-gradient(115deg,rgba(255,255,255,.15),rgba(255,255,255,0) 38%);pointer-events:none;z-index:9}
-/* 3D angles */
-.hero .phone,.step:nth-of-type(2) .phone,.trust-visual .phone{transform:perspective(1300px) rotateY(17deg) rotateX(3deg) rotateZ(-1.5deg)}
-.step:nth-of-type(1) .phone,.step:nth-of-type(3) .phone{transform:perspective(1300px) rotateY(-17deg) rotateX(3deg) rotateZ(1.5deg)}
-.p-btn{position:absolute;width:5px;background:linear-gradient(180deg,#63666d,#3c3f45 20%,#3c3f45 80%,#2b2d31);border-radius:2.5px}
-.p-btn-act{left:-8.5px;top:15%;height:24px}
-.p-btn-v1{left:-8.5px;top:23%;height:44px}
-.p-btn-v2{left:-8.5px;top:32%;height:44px}
-.p-btn-pwr{right:-8.5px;top:25%;height:72px}
-.p-btn-cam{right:-8.5px;top:57%;height:34px}
-.phone-screen{position:relative;background:#EBF1EC;border-radius:47px;overflow:hidden;display:flex;flex-direction:column;aspect-ratio:9/19.4}
-.p-island{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:86px;height:22px;background:#000;border-radius:20px;z-index:6}
-.p-island::after{content:"";position:absolute;right:7px;top:50%;transform:translateY(-50%);width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#274067,#04060c 70%)}
-.p-status{display:flex;align-items:center;justify-content:space-between;background:#517DA2;color:#fff;padding:10px 26px 3px;font-size:.7rem;font-weight:600;line-height:1}
-.p-ic{width:56px;height:12px;flex-shrink:0}
-.phone-screen::after{content:"";position:absolute;bottom:7px;left:50%;transform:translateX(-50%);width:96px;height:4px;border-radius:3px;background:rgba(0,0,0,.25);z-index:6}
-.tg-header{background:#517DA2;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:10px}
-.tg-avatar{width:32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.tg-name{font-weight:600;font-size:.88rem;line-height:1.2}
-.tg-status{font-size:.7rem;opacity:.8}
-.tg-back{width:20px;height:20px;flex-shrink:0;opacity:.95}
-.tg-menu{width:18px;height:18px;flex-shrink:0;opacity:.9}
-.tg-hinfo{flex:1;min-width:0}
-.tg-chat{flex:1;display:flex;flex-direction:column;gap:8px;padding:12px 10px 6px;overflow:hidden;background-image:radial-gradient(rgba(90,140,90,.09) 1.2px,transparent 1.3px);background-size:18px 18px}
-.tg-date{align-self:center;background:rgba(81,125,162,.16);color:#587A94;font-size:.62rem;font-weight:600;padding:3px 10px;border-radius:10px;margin-top:auto;margin-bottom:2px}
-.msg::after{content:attr(data-t);display:block;float:right;font-size:.58rem;color:#93A396;margin:7px -2px -2px 8px;line-height:1}
-.msg-out::after{content:attr(data-t) " ✓✓";color:#4FAE4E}
-.tg-input{display:flex;align-items:center;gap:10px;background:#fff;border-top:1px solid rgba(0,0,0,.05);padding:9px 12px 20px;margin:8px -10px -6px}
-.tg-input svg{width:21px;height:21px;color:#8A9AA6;flex-shrink:0}
-.tg-input .fld{flex:1;font-size:.78rem;color:#9AA6AD}
-.msg{max-width:85%;padding:9px 12px;border-radius:14px;font-size:.82rem;line-height:1.45}
-.msg-out{align-self:flex-end;background:#DCF5C8;border-bottom-right-radius:4px}
-.msg-in{align-self:flex-start;background:#fff;border-bottom-left-radius:4px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
-.voice{display:flex;align-items:center;gap:8px}
-.voice .play{width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.7rem;flex-shrink:0}
-.wave{display:flex;align-items:center;gap:2px;height:22px}
-.wave i{display:block;width:3px;border-radius:2px;background:var(--accent);opacity:.75}
-.voice .dur{font-size:.68rem;color:var(--muted)}
-.msg .tag{display:inline-block;background:var(--accent-soft);color:var(--accent-dark);font-weight:700;font-size:.7rem;border-radius:6px;padding:2px 8px;margin-bottom:5px}
-.msg b{font-weight:700}
-.msg .rows{margin-top:4px;color:#33413A}
-.msg .rows div{padding:1.5px 0}
-
-.phone-sm{width:206px;border-radius:52px;border-width:3.5px;padding:8px}
-.phone-sm::after{inset:8px;border-radius:39px}
-.phone-sm .phone-screen{border-radius:39px}
-.phone-sm .tg-input{padding:7px 10px 16px;gap:8px;margin:8px -8px -5px}
-.phone-sm .tg-input svg{width:18px;height:18px}
-.phone-sm .tg-input .fld{font-size:.68rem}
-.phone-sm .tg-back{width:17px;height:17px}
-.phone-sm .tg-menu{width:15px;height:15px}
-.phone-sm .p-island{width:70px;height:19px;top:7px}
-.phone-sm .p-island::after{width:7px;height:7px;right:6px}
-.phone-sm .p-status{padding:8px 20px 3px;font-size:.62rem}
-.phone-sm .p-ic{width:48px}
-.phone-sm .p-btn{width:4px}
-.phone-sm .p-btn-act,.phone-sm .p-btn-v1,.phone-sm .p-btn-v2{left:-7px}
-.phone-sm .p-btn-pwr,.phone-sm .p-btn-cam{right:-7px}
-.phone-sm .phone-screen::after{width:76px;bottom:6px}
-.phone-sm .tg-chat{padding:10px 8px 5px}
-.phone-sm .msg{font-size:.76rem}
-
-/* pain */
-.alt{background-color:var(--bg-alt);background-image:radial-gradient(rgba(23,163,74,.07) 1px,transparent 1.1px);background-size:26px 26px}
-.cards{display:grid;gap:14px}
-@media(min-width:720px){.cards{grid-template-columns:1fr 1fr;gap:18px}}
-.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;transition:transform .2s,box-shadow .2s,border-color .2s}
-.card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(15,27,20,.09);border-color:rgba(23,163,74,.35)}
-.pain-card{display:flex;gap:14px;align-items:flex-start;font-weight:500;font-size:1.02rem}
-.pain-mark{width:34px;height:34px;flex-shrink:0;border-radius:10px;background:#FDECEC;color:#D64545;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.05rem}
-.pain-final{text-align:center;margin-top:30px;font-size:1.15rem;font-weight:700}
-.pain-final span{color:var(--accent)}
-
-/* steps */
-.step{display:grid;gap:24px;align-items:center;padding:30px 0}
-@media(min-width:820px){
-  .step{grid-template-columns:1fr 1fr;gap:48px}
-  .step:nth-child(even) .step-visual{order:-1}
-}
-.step-num{width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;font-size:1.2rem;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
-.step h3{font-size:1.35rem;font-weight:700;margin-bottom:8px}
-.step p{color:var(--muted);font-size:1.05rem}
-.step-visual{display:flex;justify-content:center}
-/* phone visual decorations: glow + rotating dashed ring + floating chips */
-.step-visual,.trust-visual{position:relative;padding:30px 0}
-.step-visual::before,.trust-visual::before{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(420px,96vw);height:min(420px,96vw);border-radius:50%;background:radial-gradient(circle,rgba(23,163,74,.17),rgba(23,163,74,.05) 45%,transparent 68%);z-index:0;pointer-events:none}
-.step-visual::after,.trust-visual::after{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(400px,90vw);height:min(400px,90vw);border:1.5px dashed rgba(23,163,74,.30);border-radius:50%;z-index:0;pointer-events:none;animation:spin 50s linear infinite}
-.step-visual .phone,.trust-visual .phone{z-index:1}
-.chip{position:absolute;z-index:3;background:rgba(255,255,255,.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(23,163,74,.28);border-radius:12px;padding:9px 14px;font-size:.8rem;font-weight:700;color:var(--ink);box-shadow:0 10px 26px rgba(15,27,20,.13);white-space:nowrap;animation:float 4.5s ease-in-out infinite}
-.c-tl{top:9%;left:calc(50% - 195px)}
-.c-mr{top:44%;right:calc(50% - 205px);animation-delay:1.2s}
-.c-bl{bottom:9%;left:calc(50% - 185px);animation-delay:2.2s}
-.c-tr{top:12%;right:calc(50% - 185px);animation-delay:.7s}
-@media(max-width:560px){
-  .chip{font-size:.68rem;padding:7px 10px}
-  .c-tl{left:calc(50% - 158px)}
-  .c-mr{right:calc(50% - 160px)}
-  .c-bl{left:calc(50% - 152px)}
-  .c-tr{right:calc(50% - 152px)}
-}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
-@keyframes spin{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
-@keyframes weq{0%,100%{transform:scaleY(.5)}50%{transform:scaleY(1)}}
-.wave i{animation:weq 1.1s ease-in-out infinite;transform-origin:center}
-.wave i:nth-child(2n){animation-delay:.15s}
-.wave i:nth-child(3n){animation-delay:.3s}
-.wave i:nth-child(5n){animation-delay:.45s}
-@media(prefers-reduced-motion:reduce){.chip,.wave i,.step-visual::after,.trust-visual::after{animation:none}}
-
-/* features */
-.feat-grid{display:grid;gap:14px}
-@media(min-width:680px){.feat-grid{grid-template-columns:1fr 1fr;gap:18px}}
-@media(min-width:980px){.feat-grid{grid-template-columns:1fr 1fr 1fr}}
-.feat h3{font-size:1.08rem;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:10px}
-.feat p{color:var(--muted);font-size:.95rem}
-.feat-ic{width:36px;height:36px;flex-shrink:0;border-radius:10px;background:var(--accent-soft);color:var(--accent-dark);display:flex;align-items:center;justify-content:center}
-.feat-ic svg{width:19px;height:19px}
-
-/* comparison */
-.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--radius);border:1px solid var(--line);background:#fff}
-table{width:100%;border-collapse:collapse;min-width:520px;font-size:.95rem}
-th,td{padding:15px 14px;text-align:left;border-bottom:1px solid var(--line)}
-tr:last-child td{border-bottom:none}
-thead th{font-weight:700;background:var(--bg-alt);font-size:.92rem}
-td:first-child{font-weight:600}
-td.old{color:var(--muted)}
-th.hi,td.hi{background:var(--accent-soft);font-weight:700;color:var(--accent-dark)}
-th.hi{color:var(--accent-dark)}
-
-/* trust */
-.quote{font-size:1.02rem;font-weight:500;line-height:1.6}
-.quote-who{margin-top:14px;color:var(--muted);font-size:.9rem;font-weight:600}
-.quote-stars{color:#F5B301;letter-spacing:2px;margin-bottom:10px;font-size:.95rem}
-.trust-visual{margin-top:36px;display:flex;justify-content:center}
-.hero-grid .step-visual{padding:40px 0}
-
-/* faq */
-.faq-list{max-width:720px;margin:0 auto}
-details{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
-summary{cursor:pointer;list-style:none;padding:18px 20px;font-weight:700;font-size:1.02rem;display:flex;justify-content:space-between;align-items:center;gap:12px}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-size:1.4rem;font-weight:400;color:var(--accent);flex-shrink:0;transition:transform .2s}
-details[open] summary::after{transform:rotate(45deg)}
-details p{padding:0 20px 18px;color:var(--muted)}
-
-/* final cta */
-.final{background:linear-gradient(180deg,var(--bg-alt),#fff)}
-.final-inner{max-width:520px;margin:0 auto;text-align:center}
-.final .lead-form{margin:28px auto 0;text-align:left}
-
-footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:var(--muted);font-size:.88rem}
-
-/* discount popup */
-.pop-backdrop{display:none;position:fixed;inset:0;z-index:100;background:rgba(15,27,20,.5);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);align-items:center;justify-content:center;padding:16px}
-.pop-backdrop.open{display:flex}
-.pop{background:#fff;border-radius:20px;padding:30px 24px 24px;max-width:400px;width:100%;position:relative;text-align:center;box-shadow:0 30px 80px rgba(15,27,20,.35);animation:popIn .28s cubic-bezier(.2,.9,.3,1.2)}
-@keyframes popIn{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:none}}
-.pop-x{position:absolute;top:8px;right:12px;background:none;border:none;font-size:1.7rem;line-height:1;color:var(--muted);cursor:pointer;padding:6px}
-.pop-ic{width:56px;height:56px;border-radius:50%;background:var(--accent-soft);color:var(--accent-dark);font-weight:800;font-size:1.5rem;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
-.pop h3{font-size:1.35rem;font-weight:800;line-height:1.25;margin-bottom:10px;letter-spacing:-.02em}
-.pop > p{color:var(--muted);font-size:.95rem}
-.pop .lead-form{margin:18px 0 0;padding:0;border:none;box-shadow:none;max-width:none;text-align:left}
-@media(prefers-reduced-motion:reduce){.pop{animation:none}}
-</style>
-</head>
-<body>
-
-<header>
-  <div class="wrap nav">
-    <div class="logo">Hisobchi AI <span>Business</span></div>
-    <button class="btn js-cta">Sinab ko'rish</button>
-  </div>
-</header>
-
-<!-- ============ BLOK 1 — HERO ============ -->
-<section class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div>
-      <h1>Telegram'dagi AI hisobchingiz. Savdo — ovoz bilan, hisobot — bir savol bilan.</h1>
-      <p class="sub">Do'kon va savdo bizneslari uchun. Xodimingiz ovozli xabar yuboradi — savdo yoziladi. Siz so'raysiz — javob olasiz. Hech qanday dastur o'rnatilmaydi.</p>
-
-      <form class="lead-form js-lead-form" id="form-hero" novalidate>
-        <input type="text" name="name" placeholder="Ismingiz" required autocomplete="name">
-        <input type="tel" name="phone" placeholder="+998 90 123 45 67" required autocomplete="tel" inputmode="tel">
-        <button type="submit" class="btn btn-block">Sinab ko'rish</button>
-        <p class="form-note">Raqamingizni qoldiring — 2 soat ichida o'zimiz qo'ng'iroq qilamiz.</p>
-        <div class="form-success">
-          <div class="check">✓</div>
-          <p>Rahmat! Arizangiz qabul qilindi.<br>2 soat ichida o'zimiz qo'ng'iroq qilamiz.</p>
-        </div>
-      </form>
-    </div>
-
-    <div class="step-visual">
-      <div class="chip c-tl">🎙 Ovozli xabar</div>
-      <div class="chip c-mr">✅ Savdo yozildi</div>
-      <div class="chip c-bl">📊 Javob 3 soniyada</div>
-      <!-- Phone mockup: replace .tg-chat contents with a real bot screenshot <img> when available -->
-      <div class="phone">
-        <i class="p-btn p-btn-act"></i><i class="p-btn p-btn-v1"></i><i class="p-btn p-btn-v2"></i><i class="p-btn p-btn-pwr"></i><i class="p-btn p-btn-cam"></i>
-        <div class="phone-screen">
-          <div class="p-island"></div>
-          <div class="p-status"><span>9:41</span><svg class="p-ic" viewBox="0 0 60 12" fill="currentColor"><rect x="1" y="7" width="3" height="4" rx="1"/><rect x="6" y="5" width="3" height="6" rx="1"/><rect x="11" y="3" width="3" height="8" rx="1"/><rect x="16" y="1" width="3" height="10" rx="1"/><path d="M25 5.2a7.5 7.5 0 0 1 9.6 0" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round"/><path d="M27.2 7.8a4.3 4.3 0 0 1 5.2 0" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round"/><circle cx="29.8" cy="10.3" r="1.4"/><rect x="41" y="1.5" width="15" height="9" rx="3" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".55"/><rect x="43" y="3.5" width="9" height="5" rx="1.5"/><path d="M57.8 4.6v2.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-          <div class="tg-header"><svg class="tg-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg><div class="tg-avatar">H</div><div class="tg-hinfo"><div class="tg-name">Hisobchi AI</div><div class="tg-status">bot</div></div><svg class="tg-menu" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg></div>
-          <div class="tg-chat"><div class="tg-date">Bugun</div>
-            <div class="msg msg-out" data-t="09:40">
-              <div class="voice">
-                <div class="play">▶</div>
-                <div class="wave">
-                  <i style="height:8px"></i><i style="height:14px"></i><i style="height:20px"></i><i style="height:11px"></i><i style="height:16px"></i><i style="height:7px"></i><i style="height:18px"></i><i style="height:12px"></i><i style="height:20px"></i><i style="height:9px"></i><i style="height:15px"></i><i style="height:6px"></i><i style="height:13px"></i><i style="height:17px"></i><i style="height:8px"></i>
-                </div>
-                <span class="dur">0:04</span>
-              </div>
-            </div>
-            <div class="msg msg-in" data-t="09:41">🎙 «5 ta sotdim, 750 ming, naqd»</div>
-            <div class="msg msg-in" data-t="09:41">
-              <span class="tag">✅ Savdo yozildi</span>
-              <div class="rows">
-                <div>Miqdor: <b>5 dona</b></div>
-                <div>Summa: <b>750 000 so'm</b></div>
-                <div>To'lov: <b>Naqd</b></div>
-              </div>
-            </div>
-            <div class="tg-input"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21.4 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.2-9.19a4 4 0 1 1 5.65 5.66l-9.2 9.19a2 2 0 0 1-2.82-2.83l8.48-8.48"/></svg><span class="fld">Xabar</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ BLOK 2 — OG'RIQ ============ -->
-<section class="alt">
-  <div class="wrap">
-    <h2>Har kuni shu ahvolmi?</h2>
-    <div class="cards">
-      <div class="card pain-card"><div class="pain-mark">✕</div><div>Kechqurun kassa hisobi bir soat oladi — raqamlar baribir to'g'ri kelmaydi</div></div>
-      <div class="card pain-card"><div class="pain-mark">✕</div><div>Kim qancha qarz — daftarda, xotirada, har xil joyda</div></div>
-      <div class="card pain-card"><div class="pain-mark">✕</div><div>«Bugun qancha sotdik?» — xodimga qo'ng'iroq qilib so'raysiz</div></div>
-      <div class="card pain-card"><div class="pain-mark">✕</div><div>Oy oxirida foyda qancha — aniq hech kim bilmaydi</div></div>
-    </div>
-    <p class="pain-final">Bularning hammasini <span>bitta Telegram bot</span> hal qiladi.</p>
-    <div class="section-cta"><button class="btn js-cta">Muammoni hal qilish</button></div>
-  </div>
-</section>
-
-<!-- ============ BLOK 3 — QANDAY ISHLAYDI ============ -->
-<section>
-  <div class="wrap">
-    <h2>Qanday ishlaydi?</h2>
-
-    <div class="step">
-      <div>
-        <div class="step-num">1</div>
-        <h3>Telegram'da botni ochasiz</h3>
-        <p>Hech narsa o'rnatilmaydi. 5 daqiqada tayyor.</p>
-      </div>
-      <div class="step-visual">
-        <div class="chip c-tr">⚡ 5 daqiqada tayyor</div>
-        <!-- Replace with real screenshot when available -->
-        <div class="phone phone-sm">
-          <i class="p-btn p-btn-act"></i><i class="p-btn p-btn-v1"></i><i class="p-btn p-btn-v2"></i><i class="p-btn p-btn-pwr"></i><i class="p-btn p-btn-cam"></i>
-          <div class="phone-screen">
-            <div class="p-island"></div>
-            <div class="p-status"><span>9:41</span><svg class="p-ic" viewBox="0 0 60 12" fill="currentColor"><rect x="1" y="7" width="3" height="4" rx="1"/><rect x="6" y="5" width="3" height="6" rx="1"/><rect x="11" y="3" width="3" height="8" rx="1"/><rect x="16" y="1" width="3" height="10" rx="1"/><path d="M25 5.2a7.5 7.5 0 0 1 9.6 0" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round"/><path d="M27.2 7.8a4.3 4.3 0 0 1 5.2 0" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round"/><circle cx="29.8" cy="10.3" r="1.4"/><rect x="41" y="1.5" width="15" height="9" rx="3" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".55"/><rect x="43" y="3.5" width="9" height="5" rx="1.5"/><path d="M57.8 4.6v2.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-            <div class="tg-header"><svg class="tg-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg><div class="tg-avatar">H</div><div class="tg-hinfo"><div class="tg-name">Hisobchi AI</div><div class="tg-status">bot</div></div><svg class="tg-menu" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg></div>
-            <div class="tg-chat"><div class="tg-date">Bugun</div>
-              <div class="msg msg-out" data-t="09:40">/start</div>
-              <div class="msg msg-in" data-t="09:41">👋 Xush kelibsiz! Bot ishga tayyor.</div>
-              <div class="tg-input"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21.4 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.2-9.19a4 4 0 1 1 5.65 5.66l-9.2 9.19a2 2 0 0 1-2.82-2.83l8.48-8.48"/></svg><span class="fld">Xabar</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="step">
-      <div>
-        <div class="step-num">2</div>
-        <h3>Xodimlar ovoz bilan yozadi</h3>
-        <p>«5 ta sotdim, 750 ming, naqd» — savdo avtomatik yozildi.</p>
-      </div>
-      <div class="step-visual">
-        <div class="chip c-tr">✅ Avtomatik yozildi</div>
-        <div class="phone phone-sm">
-          <i class="p-btn p-btn-act"></i><i class="p-btn p-btn-v1"></i><i class="p-btn p-btn-v2"></i><i class="p-btn p-btn-pwr"></i><i class="p-btn p-btn-cam"></i>
-          <div class="phone-screen">
-            <div class="p-island"></div>
-            <div class="p-status"><span>9:41</span><svg class="p-ic" viewBox="0 0 60 12" fill="currentColor"><rect x="1" y="7" width="3" height="4" rx="1"/><rect x="6" y="5" width="3" height="6" rx="1"/><rect x="11" y="3" width="3" height="8" rx="1"/><rect x="16" y="1" width="3" height="10" rx="1"/><path d="M25 5.2a7.5 7.5 0 0 1 9.6 0" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round"/><path d="M27.2 7.8a4.3 4.3 0 0 1 5.2 0" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round"/><circle cx="29.8" cy="10.3" r="1.4"/><rect x="41" y="1.5" width="15" height="9" rx="3" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".55"/><rect x="43" y="3.5" width="9" height="5" rx="1.5"/><path d="M57.8 4.6v2.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-            <div class="tg-header"><svg class="tg-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg><div class="tg-avatar">H</div><div class="tg-hinfo"><div class="tg-name">Hisobchi AI</div><div class="tg-status">bot</div></div><svg class="tg-menu" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg></div>
-            <div class="tg-chat"><div class="tg-date">Bugun</div>
-              <div class="msg msg-out" data-t="09:40">
-                <div class="voice">
-                  <div class="play">▶</div>
-                  <div class="wave"><i style="height:7px"></i><i style="height:13px"></i><i style="height:18px"></i><i style="height:10px"></i><i style="height:15px"></i><i style="height:6px"></i><i style="height:16px"></i><i style="height:11px"></i><i style="height:18px"></i><i style="height:8px"></i></div>
-                  <span class="dur">0:04</span>
-                </div>
-              </div>
-              <div class="msg msg-in" data-t="09:41"><span class="tag">✅ Savdo yozildi</span><div class="rows"><div>5 dona · 750 000 so'm · Naqd</div></div></div>
-              <div class="tg-input"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21.4 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.2-9.19a4 4 0 1 1 5.65 5.66l-9.2 9.19a2 2 0 0 1-2.82-2.83l8.48-8.48"/></svg><span class="fld">Xabar</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="step">
-      <div>
-        <div class="step-num">3</div>
-        <h3>Siz savol berasiz</h3>
-        <p>«Bugungi sotuv qancha?» — javob 3 soniyada.</p>
-      </div>
-      <div class="step-visual">
-        <div class="chip c-tr">💬 Bir savol bilan</div>
-        <div class="phone phone-sm">
-          <i class="p-btn p-btn-act"></i><i class="p-btn p-btn-v1"></i><i class="p-btn p-btn-v2"></i><i class="p-btn p-btn-pwr"></i><i class="p-btn p-btn-cam"></i>
-          <div class="phone-screen">
-            <div class="p-island"></div>
-            <div class="p-status"><span>9:41</span><svg class="p-ic" viewBox="0 0 60 12" fill="currentColor"><rect x="1" y="7" width="3" height="4" rx="1"/><rect x="6" y="5" width="3" height="6" rx="1"/><rect x="11" y="3" width="3" height="8" rx="1"/><rect x="16" y="1" width="3" height="10" rx="1"/><path d="M25 5.2a7.5 7.5 0 0 1 9.6 0" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round"/><path d="M27.2 7.8a4.3 4.3 0 0 1 5.2 0" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round"/><circle cx="29.8" cy="10.3" r="1.4"/><rect x="41" y="1.5" width="15" height="9" rx="3" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".55"/><rect x="43" y="3.5" width="9" height="5" rx="1.5"/><path d="M57.8 4.6v2.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-            <div class="tg-header"><svg class="tg-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg><div class="tg-avatar">H</div><div class="tg-hinfo"><div class="tg-name">Hisobchi AI</div><div class="tg-status">bot</div></div><svg class="tg-menu" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg></div>
-            <div class="tg-chat"><div class="tg-date">Bugun</div>
-              <div class="msg msg-out" data-t="09:40">Bugungi sotuv qancha?</div>
-              <div class="msg msg-in" data-t="09:41"><span class="tag">📊 Bugungi sotuv</span><div class="rows"><div>Jami: <b>4 250 000 so'm</b></div><div>Savdolar soni: <b>17 ta</b></div></div></div>
-              <div class="tg-input"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21.4 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.2-9.19a4 4 0 1 1 5.65 5.66l-9.2 9.19a2 2 0 0 1-2.82-2.83l8.48-8.48"/></svg><span class="fld">Xabar</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-cta"><button class="btn js-cta">Sinab ko'rish</button></div>
-  </div>
-</section>
-
-<!-- ============ BLOK 4 — IMKONIYATLAR ============ -->
-<section class="alt">
-  <div class="wrap">
-    <h2>Biznesingiz uchun nima qiladi?</h2>
-    <div class="feat-grid">
-      <div class="card feat">
-        <h3><span class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg></span>Ovozli savdo yozish</h3>
-        <p>Xodim gapiradi, AI yozadi. Excel ham, daftar ham kerak emas.</p>
-      </div>
-      <div class="card feat">
-        <h3><span class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></span>Qarz nazorati</h3>
-        <p>Har bir mijoz bo'yicha: qachon oldi, qancha qaytardi. So'mda ham, dollarda ham.</p>
-      </div>
-      <div class="card feat">
-        <h3><span class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></span>Nakladnoy skaneri</h3>
-        <p>Suratga oling — 40 ta mahsulot 10 soniyada bazada.</p>
-      </div>
-      <div class="card feat">
-        <h3><span class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>Xodimlar hisobi</h3>
-        <p>Kim qancha sotdi — real vaqtda. Komissiya avtomatik hisoblanadi.</p>
-      </div>
-      <div class="card feat">
-        <h3><span class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></span>Foyda-zarar hisoboti</h3>
-        <p>Kirim, chiqim, sof foyda — bir savol bilan.</p>
-      </div>
-      <div class="card feat">
-        <h3><span class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/></svg></span>Google Sheets</h3>
-        <p>Barcha ma'lumotlar jadvalga avtomatik tushadi.</p>
-      </div>
-    </div>
-    <div class="section-cta"><button class="btn js-cta">O'z biznesimda ko'rish</button></div>
-  </div>
-</section>
-
-<!-- ============ BLOK 5 — TAQQOSLASH ============ -->
-<section>
-  <div class="wrap">
-    <h2>Daftar. Excel. Hisobchi AI.</h2>
-    <div class="table-scroll">
-      <table>
-        <thead>
-          <tr><th></th><th>Daftar</th><th>Excel</th><th class="hi">Hisobchi AI</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Savdo yozish</td><td class="old">Qo'lda</td><td class="old">Kompyuterda</td><td class="hi">5 soniyalik ovoz</td></tr>
-          <tr><td>Qarz nazorati</td><td class="old">Unutiladi</td><td class="old">Kim yuritadi?</td><td class="hi">Avtomatik</td></tr>
-          <tr><td>Xodim nazorati</td><td class="old">Ishonchga</td><td class="old">Oy oxirida</td><td class="hi">Real vaqtda</td></tr>
-          <tr><td>Hisobot</td><td class="old">Yo'q</td><td class="old">O'zingiz tuzasiz</td><td class="hi">Bir savol bilan</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="section-cta"><button class="btn js-cta">Sinab ko'rish</button></div>
-  </div>
-</section>
-
-<!-- ============ BLOK 6 — ISHONCH ============ -->
-<section class="alt">
-  <div class="wrap">
-    <h2>Mijozlarimiz nima deydi?</h2>
-    <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
-      <div class="card">
-        <div class="quote-stars">★★★★★</div>
-        <p class="quote">«Kechki hisob 1 soat olardi — endi 0 daqiqa. Hamma qarz bitta ekranda.»</p>
-        <p class="quote-who">— do'kon egasi, Toshkent</p>
-      </div>
-      <!-- PLACEHOLDER: replace the two cards below with real customer testimonials -->
-      <div class="card">
-        <div class="quote-stars">★★★★★</div>
-        <p class="quote">«[Mijoz fikri — real mijozdan olinadi]»</p>
-        <p class="quote-who">— [biznes turi, shahar]</p>
-      </div>
-      <div class="card">
-        <div class="quote-stars">★★★★★</div>
-        <p class="quote">«[Mijoz fikri — real mijozdan olinadi]»</p>
-        <p class="quote-who">— [biznes turi, shahar]</p>
-      </div>
-    </div>
-
-    <div class="trust-visual">
-      <div class="chip c-tl">📋 Hamma qarz bitta ekranda</div>
-      <!-- Replace .tg-chat contents with a real customer bot screenshot (with consent) -->
-      <div class="phone phone-sm">
-        <i class="p-btn p-btn-act"></i><i class="p-btn p-btn-v1"></i><i class="p-btn p-btn-v2"></i><i class="p-btn p-btn-pwr"></i><i class="p-btn p-btn-cam"></i>
-        <div class="phone-screen">
-          <div class="p-island"></div>
-          <div class="p-status"><span>9:41</span><svg class="p-ic" viewBox="0 0 60 12" fill="currentColor"><rect x="1" y="7" width="3" height="4" rx="1"/><rect x="6" y="5" width="3" height="6" rx="1"/><rect x="11" y="3" width="3" height="8" rx="1"/><rect x="16" y="1" width="3" height="10" rx="1"/><path d="M25 5.2a7.5 7.5 0 0 1 9.6 0" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round"/><path d="M27.2 7.8a4.3 4.3 0 0 1 5.2 0" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round"/><circle cx="29.8" cy="10.3" r="1.4"/><rect x="41" y="1.5" width="15" height="9" rx="3" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".55"/><rect x="43" y="3.5" width="9" height="5" rx="1.5"/><path d="M57.8 4.6v2.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-          <div class="tg-header"><svg class="tg-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg><div class="tg-avatar">H</div><div class="tg-hinfo"><div class="tg-name">Hisobchi AI</div><div class="tg-status">bot</div></div><svg class="tg-menu" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg></div>
-          <div class="tg-chat"><div class="tg-date">Bugun</div>
-            <div class="msg msg-out" data-t="09:40">Qarzdorlar ro'yxati</div>
-            <div class="msg msg-in" data-t="09:41"><span class="tag">📋 Qarzdorlar</span><div class="rows"><div>Anvar aka — <b>1 200 000 so'm</b></div><div>Dilshod — <b>350 000 so'm</b></div><div>Umida opa — <b>$120</b></div></div></div>
-            <div class="tg-input"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21.4 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.2-9.19a4 4 0 1 1 5.65 5.66l-9.2 9.19a2 2 0 0 1-2.82-2.83l8.48-8.48"/></svg><span class="fld">Xabar</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-cta"><button class="btn js-cta">Men ham boshlayman</button></div>
-  </div>
-</section>
-
-<!-- ============ BLOK 7 — FAQ ============ -->
-<section>
-  <div class="wrap">
-    <h2>Ko'p so'raladigan savollar</h2>
-    <div class="faq-list">
-      <details>
-        <summary>O'rnatish qiyinmi?</summary>
-        <p>Hech narsa o'rnatilmaydi. Telegram bor — Hisobchi AI ishlaydi. 5 daqiqada boshlaysiz.</p>
-      </details>
-      <details>
-        <summary>Xodimlarim o'rgana oladimi?</summary>
-        <p>Ovozli xabar yuborishni biladimi? Demak, o'rgangan.</p>
-      </details>
-      <details>
-        <summary>Xato yozilsa-chi?</summary>
-        <p>Istalgan yozuvni tuzatish yoki o'chirish mumkin.</p>
-      </details>
-      <details>
-        <summary>Ma'lumotlarim xavfsizmi?</summary>
-        <p>Ma'lumotlaringiz faqat sizga tegishli. Istalgan payt Google Sheets'ga yuklab olasiz.</p>
-      </details>
-      <details>
-        <summary>Dollar bilan ishlaysizlarmi?</summary>
-        <p>Ha, UZS va USD parallel yuritiladi.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- ============ BLOK 8 — YAKUNIY CTA ============ -->
-<section class="final">
-  <div class="wrap final-inner">
-    <h2 style="margin-bottom:0">Biznesingizni tartibga solish uchun 5 daqiqa kifoya</h2>
-    <form class="lead-form js-lead-form" id="form-final" novalidate>
-      <input type="text" name="name" placeholder="Ismingiz" required autocomplete="name">
-      <input type="tel" name="phone" placeholder="+998 90 123 45 67" required autocomplete="tel" inputmode="tel">
-      <button type="submit" class="btn btn-block">Sinab ko'rish</button>
-      <p class="form-note">Raqamingizni qoldiring — 2 soat ichida qo'ng'iroq qilamiz, hammasini o'zimiz sozlab beramiz.</p>
-      <div class="form-success">
-        <div class="check">✓</div>
-        <p>Rahmat! Arizangiz qabul qilindi.<br>2 soat ichida o'zimiz qo'ng'iroq qilamiz.</p>
-      </div>
-    </form>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">© 2026 Hisobchi AI Business</div>
-</footer>
-
-<!-- Discount popup: shows once — after 25s on page OR 50% scroll, whichever first -->
-<div class="pop-backdrop" id="pop-backdrop" role="dialog" aria-modal="true" aria-labelledby="pop-title">
-  <div class="pop">
-    <button class="pop-x" id="pop-x" aria-label="Yopish">×</button>
-    <div class="pop-ic">%</div>
-    <h3 id="pop-title">Shu oyda — maxsus chegirma</h3>
-    <p>Shu oy ro'yxatdan o'tgan har bir mijozga maxsus chegirma taqdim etamiz. Raqamingizni qoldiring — chegirmangizni hoziroq band qiling.</p>
-    <form class="lead-form js-lead-form" id="form-popup" novalidate>
-      <input type="text" name="name" placeholder="Ismingiz" required autocomplete="name">
-      <input type="tel" name="phone" placeholder="+998 90 123 45 67" required autocomplete="tel" inputmode="tel">
-      <button type="submit" class="btn btn-block">Chegirmani olish</button>
-      <p class="form-note">2 soat ichida o'zimiz qo'ng'iroq qilamiz.</p>
-      <div class="form-success">
-        <div class="check">✓</div>
-        <p>Rahmat! Arizangiz qabul qilindi.<br>2 soat ichida o'zimiz qo'ng'iroq qilamiz.</p>
-      </div>
-    </form>
-  </div>
-</div>
-
-<script>
-/* ============================================================
-   GOOGLE SHEETS WEBHOOK
-   1. Create a Google Sheet with columns: Timestamp | Name | Phone | Source
-   2. Extensions → Apps Script → paste:
-
-      function doPost(e){
-        var s = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-        s.appendRow([new Date(), e.parameter.name, e.parameter.phone, e.parameter.source]);
-        return ContentService.createTextOutput("ok");
+    <style>
+      :root {
+        --accent: #17a34a;
+        --accent-dark: #128a3e;
+        --accent-soft: #e8f7ee;
+        --ink: #0f1b14;
+        --muted: #5b6b62;
+        --line: #e4ebe6;
+        --bg-alt: #f5f9f6;
+        --radius: 16px;
       }
-
-   3. Deploy → New deployment → Web app → Execute as: Me,
-      Who has access: Anyone → copy the URL below.
-   ============================================================ */
-var GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxPynfDWsH5dolh948Fb2saebwso-0jaNbpkHSOBcdSQeHX0ubX8smb26jfq_jqHss/exec";
-
-/* CTA buttons scroll to the nearest form */
-document.querySelectorAll('.js-cta').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var hero = document.getElementById('form-hero');
-    var fin  = document.getElementById('form-final');
-    var y = btn.getBoundingClientRect().top;
-    var target = Math.abs(hero.getBoundingClientRect().top - y) <= Math.abs(fin.getBoundingClientRect().top - y) ? hero : fin;
-    target.scrollIntoView({behavior:'smooth', block:'center'});
-    setTimeout(function(){ target.querySelector('input[name="name"]').focus({preventScroll:true}); }, 600);
-  });
-});
-
-/* Phone: force +998 prefix, digits only, auto-format */
-document.querySelectorAll('input[name="phone"]').forEach(function(inp){
-  inp.addEventListener('focus', function(){ if(!inp.value) inp.value = '+998 '; });
-  inp.addEventListener('input', function(){
-    var d = inp.value.replace(/\D/g,'');
-    if(d.indexOf('998') !== 0) d = '998' + d.replace(/^998/,'');
-    d = d.slice(0,12);
-    var out = '+998';
-    if(d.length>3) out += ' ' + d.slice(3,5);
-    if(d.length>5) out += ' ' + d.slice(5,8);
-    if(d.length>8) out += ' ' + d.slice(8,10);
-    if(d.length>10) out += ' ' + d.slice(10,12);
-    inp.value = out;
-  });
-});
-
-/* Submit */
-document.querySelectorAll('.js-lead-form').forEach(function(form){
-  form.addEventListener('submit', function(ev){
-    ev.preventDefault();
-    var name = form.querySelector('input[name="name"]');
-    var phone = form.querySelector('input[name="phone"]');
-    var digits = phone.value.replace(/\D/g,'');
-    if(!name.value.trim()){ name.style.borderColor = '#D64545'; name.focus(); return; }
-    name.style.borderColor = '';
-    if(digits.length !== 12){ phone.style.borderColor = '#D64545'; phone.focus(); return; }
-    phone.style.borderColor = '';
-
-    var btn = form.querySelector('button[type="submit"]');
-    var origText = btn.textContent;
-    btn.disabled = true; btn.textContent = 'Yuborilmoqda...';
-
-    var done = function(){
-      form.querySelectorAll('input, button, .form-note').forEach(function(el){ el.style.display='none'; });
-      form.querySelector('.form-success').style.display = 'block';
-      if (typeof fbq === 'function') fbq('track', 'Lead');
-      try{ localStorage.setItem('hisobchi_pop','1'); }catch(e){}
-      if(form.id === 'form-popup'){ setTimeout(closePop, 2500); }
-    };
-
-    if(GOOGLE_SCRIPT_URL.indexOf('http') === 0){
-      /* hidden form + iframe: no CORS, works from local files and any hosting */
-      try{
-        var sink = document.getElementById('lead-sink');
-        if(!sink){
-          sink = document.createElement('iframe');
-          sink.name = 'lead-sink'; sink.id = 'lead-sink'; sink.style.display = 'none';
-          document.body.appendChild(sink);
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family:
+          "Inter",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        color: var(--ink);
+        background: #fff;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      .wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
+        z-index: 1;
+      }
+      section {
+        padding: 56px 0;
+        position: relative;
+        overflow: hidden;
+      }
+      @media (min-width: 768px) {
+        section {
+          padding: 88px 0;
         }
-        var hf = document.createElement('form');
-        hf.method = 'POST'; hf.action = GOOGLE_SCRIPT_URL; hf.target = 'lead-sink'; hf.style.display = 'none';
-        [['name', name.value.trim()], ['phone', '+' + digits], ['source', form.id]].forEach(function(p){
-          var inp = document.createElement('input');
-          inp.type = 'hidden'; inp.name = p[0]; inp.value = p[1];
-          hf.appendChild(inp);
-        });
-        document.body.appendChild(hf);
-        hf.submit();
-        hf.remove();
-        done();
-      }catch(err){
-        btn.disabled = false; btn.textContent = origText;
-        alert("Xatolik yuz berdi. Iltimos, qayta urinib ko'ring.");
       }
-    } else {
-      console.warn('GOOGLE_SCRIPT_URL not set — lead:', name.value.trim(), '+' + digits, form.id);
-      done();
-    }
-  });
-});
 
-/* ===== Discount popup: 25s on page OR 50% scroll, once per visitor ===== */
-var popBackdrop = document.getElementById('pop-backdrop');
-var popOpened = false;
+      h1 {
+        font-size: clamp(1.65rem, 5.5vw, 2.9rem);
+        font-weight: 800;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+      }
+      h2 {
+        font-size: clamp(1.45rem, 4.5vw, 2.2rem);
+        font-weight: 800;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        text-align: center;
+        margin-bottom: 36px;
+      }
+      .sub {
+        color: var(--muted);
+        font-size: clamp(1rem, 3vw, 1.15rem);
+        margin-top: 14px;
+      }
 
-function popAllowed(){
-  try{ return !localStorage.getItem('hisobchi_pop'); }catch(e){ return true; }
-}
-function openPop(){
-  if(popOpened || !popAllowed()) return;
-  /* don't interrupt someone already typing in a form — retry shortly */
-  var ae = document.activeElement;
-  if(ae && (ae.tagName === 'INPUT' || ae.tagName === 'TEXTAREA')){ setTimeout(openPop, 10000); return; }
-  popOpened = true;
-  popBackdrop.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closePop(){
-  popBackdrop.classList.remove('open');
-  document.body.style.overflow = '';
-  try{ localStorage.setItem('hisobchi_pop','1'); }catch(e){}
-}
+      /* buttons */
+      .btn {
+        display: inline-block;
+        background: var(--accent);
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.05rem;
+        border: none;
+        border-radius: 12px;
+        padding: 16px 34px;
+        cursor: pointer;
+        text-align: center;
+        transition:
+          background 0.15s,
+          transform 0.1s;
+        box-shadow: 0 6px 18px rgba(23, 163, 74, 0.28);
+      }
+      .btn:hover {
+        background: var(--accent-dark);
+      }
+      .btn:active {
+        transform: scale(0.98);
+      }
+      .btn-block {
+        width: 100%;
+      }
+      .section-cta {
+        text-align: center;
+        margin-top: 36px;
+      }
 
-/* trigger 1: 25 seconds on page */
-setTimeout(openPop, 25000);
+      /* header */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+      }
+      .logo {
+        font-weight: 800;
+        font-size: 1.15rem;
+        letter-spacing: -0.02em;
+      }
+      .logo span {
+        color: var(--accent);
+      }
+      .nav .btn {
+        padding: 9px 20px;
+        font-size: 0.92rem;
+        box-shadow: none;
+      }
 
-/* trigger 2: scrolled 50% of the page */
-window.addEventListener('scroll', function onScroll(){
-  var max = document.documentElement.scrollHeight - window.innerHeight;
-  if(max > 0 && window.scrollY / max >= 0.5){
-    window.removeEventListener('scroll', onScroll);
-    openPop();
-  }
-}, {passive:true});
+      /* hero */
+      .hero {
+        padding: 36px 0 56px;
+        background: radial-gradient(
+          900px 480px at 82% 8%,
+          rgba(23, 163, 74, 0.08),
+          transparent 62%
+        );
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(15, 27, 20, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(15, 27, 20, 0.04) 1px, transparent 1px);
+        background-size: 44px 44px;
+        -webkit-mask-image: radial-gradient(
+          ellipse 80% 90% at 70% 10%,
+          #000 30%,
+          transparent 75%
+        );
+        mask-image: radial-gradient(
+          ellipse 80% 90% at 70% 10%,
+          #000 30%,
+          transparent 75%
+        );
+        pointer-events: none;
+      }
+      .hero-grid {
+        display: grid;
+        gap: 36px;
+      }
+      @media (min-width: 900px) {
+        .hero {
+          padding: 72px 0 96px;
+        }
+        .hero-grid {
+          grid-template-columns: 1.05fr 0.95fr;
+          gap: 56px;
+          align-items: center;
+        }
+      }
 
-document.getElementById('pop-x').addEventListener('click', closePop);
-popBackdrop.addEventListener('click', function(e){ if(e.target === popBackdrop) closePop(); });
-document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && popBackdrop.classList.contains('open')) closePop(); });
-</script>
-</body>
+      /* form */
+      .lead-form {
+        margin-top: 24px;
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 18px;
+        box-shadow: 0 10px 30px rgba(15, 27, 20, 0.06);
+        max-width: 440px;
+      }
+      .lead-form input,
+      .lead-form select {
+        width: 100%;
+        padding: 14px 16px;
+        font-size: 1rem;
+        font-family: inherit;
+        border: 1.5px solid var(--line);
+        border-radius: 12px;
+        margin-bottom: 10px;
+        outline: none;
+        transition: border 0.15s;
+        background: #fff;
+        color: var(--ink);
+      }
+      .lead-form select:invalid {
+        color: var(--muted);
+      }
+      .lead-form input:focus,
+      .lead-form select:focus {
+        border-color: var(--accent);
+      }
+      .form-note {
+        font-size: 0.86rem;
+        color: var(--muted);
+        margin-top: 10px;
+        text-align: center;
+      }
+      .form-success {
+        display: none;
+        text-align: center;
+        padding: 26px 10px;
+      }
+      .form-success .check {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 12px;
+      }
+      .form-success p {
+        font-weight: 600;
+      }
+
+      /* phone mockup — real bot screenshots */
+      .phone-shot {
+        display: block;
+        width: 272px;
+        max-width: 76vw;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        filter: drop-shadow(0 26px 50px rgba(15, 27, 20, 0.3));
+      }
+      .phone-shot.phone-sm {
+        width: 206px;
+        max-width: 60vw;
+      }
+
+      /* pain */
+      .alt {
+        background-color: var(--bg-alt);
+        background-image: radial-gradient(
+          rgba(23, 163, 74, 0.07) 1px,
+          transparent 1.1px
+        );
+        background-size: 26px 26px;
+      }
+      .cards {
+        display: grid;
+        gap: 14px;
+      }
+      @media (min-width: 720px) {
+        .cards {
+          grid-template-columns: 1fr 1fr;
+          gap: 18px;
+        }
+      }
+      .card {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 22px;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s,
+          border-color 0.2s;
+      }
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 14px 34px rgba(15, 27, 20, 0.09);
+        border-color: rgba(23, 163, 74, 0.35);
+      }
+      .pain-card {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        font-weight: 500;
+        font-size: 1.02rem;
+      }
+      .pain-mark {
+        width: 34px;
+        height: 34px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: #fdecec;
+        color: #d64545;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 1.05rem;
+      }
+      .pain-final {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 1.15rem;
+        font-weight: 700;
+      }
+      .pain-final span {
+        color: var(--accent);
+      }
+
+      /* steps */
+      .step {
+        display: grid;
+        gap: 24px;
+        align-items: center;
+        padding: 30px 0;
+      }
+      @media (min-width: 820px) {
+        .step {
+          grid-template-columns: 1fr 1fr;
+          gap: 48px;
+        }
+        .step:nth-child(even) .step-visual {
+          order: -1;
+        }
+      }
+      .step-num {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: var(--accent);
+        color: #fff;
+        font-weight: 800;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 14px;
+      }
+      .step h3 {
+        font-size: 1.35rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .step p {
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+      .step-visual {
+        display: flex;
+        justify-content: center;
+      }
+      /* phone visual decorations: glow + rotating dashed ring + floating chips */
+      .step-visual,
+      .trust-visual {
+        position: relative;
+        padding: 30px 0;
+      }
+      .step-visual::before,
+      .trust-visual::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: min(420px, 96vw);
+        height: min(420px, 96vw);
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(23, 163, 74, 0.17),
+          rgba(23, 163, 74, 0.05) 45%,
+          transparent 68%
+        );
+        z-index: 0;
+        pointer-events: none;
+      }
+      .step-visual::after,
+      .trust-visual::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: min(400px, 90vw);
+        height: min(400px, 90vw);
+        border: 1.5px dashed rgba(23, 163, 74, 0.3);
+        border-radius: 50%;
+        z-index: 0;
+        pointer-events: none;
+        animation: spin 50s linear infinite;
+      }
+      .chip {
+        position: absolute;
+        z-index: 3;
+        background: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(23, 163, 74, 0.28);
+        border-radius: 12px;
+        padding: 9px 14px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--ink);
+        box-shadow: 0 10px 26px rgba(15, 27, 20, 0.13);
+        white-space: nowrap;
+        animation: float 4.5s ease-in-out infinite;
+      }
+      .c-tl {
+        top: 9%;
+        left: calc(50% - 195px);
+      }
+      .c-mr {
+        top: 44%;
+        right: calc(50% - 205px);
+        animation-delay: 1.2s;
+      }
+      .c-bl {
+        bottom: 9%;
+        left: calc(50% - 185px);
+        animation-delay: 2.2s;
+      }
+      .c-tr {
+        top: 12%;
+        right: calc(50% - 185px);
+        animation-delay: 0.7s;
+      }
+      @media (max-width: 560px) {
+        .chip {
+          font-size: 0.68rem;
+          padding: 7px 10px;
+        }
+        .c-tl {
+          left: calc(50% - 158px);
+        }
+        .c-mr {
+          right: calc(50% - 160px);
+        }
+        .c-bl {
+          left: calc(50% - 152px);
+        }
+        .c-tr {
+          right: calc(50% - 152px);
+        }
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-9px);
+        }
+      }
+      @keyframes spin {
+        from {
+          transform: translate(-50%, -50%) rotate(0);
+        }
+        to {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .chip,
+        .step-visual::after,
+        .trust-visual::after {
+          animation: none;
+        }
+      }
+
+      /* features */
+      .feat-grid {
+        display: grid;
+        gap: 14px;
+      }
+      @media (min-width: 680px) {
+        .feat-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 18px;
+        }
+      }
+      @media (min-width: 980px) {
+        .feat-grid {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+      .feat h3 {
+        font-size: 1.08rem;
+        font-weight: 700;
+        margin-bottom: 6px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .feat p {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      .feat-ic {
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: var(--accent-soft);
+        color: var(--accent-dark);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .feat-ic svg {
+        width: 19px;
+        height: 19px;
+      }
+
+      /* comparison */
+      .table-scroll {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: var(--radius);
+        border: 1px solid var(--line);
+        background: #fff;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 520px;
+        font-size: 0.95rem;
+      }
+      th,
+      td {
+        padding: 15px 14px;
+        text-align: left;
+        border-bottom: 1px solid var(--line);
+      }
+      tr:last-child td {
+        border-bottom: none;
+      }
+      thead th {
+        font-weight: 700;
+        background: var(--bg-alt);
+        font-size: 0.92rem;
+      }
+      td:first-child {
+        font-weight: 600;
+      }
+      td.old {
+        color: var(--muted);
+      }
+      th.hi,
+      td.hi {
+        background: var(--accent-soft);
+        font-weight: 700;
+        color: var(--accent-dark);
+      }
+      th.hi {
+        color: var(--accent-dark);
+      }
+
+      /* trust */
+      .quote {
+        font-size: 1.02rem;
+        font-weight: 500;
+        line-height: 1.6;
+      }
+      .quote-who {
+        margin-top: 14px;
+        color: var(--muted);
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+      .quote-stars {
+        color: #f5b301;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+      }
+      .trust-visual {
+        margin-top: 36px;
+        display: flex;
+        justify-content: center;
+      }
+      .hero-grid .step-visual {
+        padding: 40px 0;
+      }
+
+      /* faq */
+      .faq-list {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+      details {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        margin-bottom: 10px;
+        overflow: hidden;
+      }
+      summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 18px 20px;
+        font-weight: 700;
+        font-size: 1.02rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+      }
+      summary::-webkit-details-marker {
+        display: none;
+      }
+      summary::after {
+        content: "+";
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: var(--accent);
+        flex-shrink: 0;
+        transition: transform 0.2s;
+      }
+      details[open] summary::after {
+        transform: rotate(45deg);
+      }
+      details p {
+        padding: 0 20px 18px;
+        color: var(--muted);
+      }
+
+      /* final cta */
+      .final {
+        background: linear-gradient(180deg, var(--bg-alt), #fff);
+      }
+      .final-inner {
+        max-width: 520px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .final .lead-form {
+        margin: 28px auto 0;
+        text-align: left;
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 26px 0;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      /* discount popup */
+      .pop-backdrop {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        background: rgba(15, 27, 20, 0.5);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+      }
+      .pop-backdrop.open {
+        display: flex;
+      }
+      .pop {
+        background: #fff;
+        border-radius: 20px;
+        padding: 30px 24px 24px;
+        max-width: 400px;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        box-shadow: 0 30px 80px rgba(15, 27, 20, 0.35);
+        animation: popIn 0.28s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+      }
+      @keyframes popIn {
+        from {
+          opacity: 0;
+          transform: translateY(24px) scale(0.96);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      .pop-x {
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        background: none;
+        border: none;
+        font-size: 1.7rem;
+        line-height: 1;
+        color: var(--muted);
+        cursor: pointer;
+        padding: 6px;
+      }
+      .pop-ic {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: var(--accent-soft);
+        color: var(--accent-dark);
+        font-weight: 800;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 14px;
+      }
+      .pop h3 {
+        font-size: 1.35rem;
+        font-weight: 800;
+        line-height: 1.25;
+        margin-bottom: 10px;
+        letter-spacing: -0.02em;
+      }
+      .pop > p {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      .pop .lead-form {
+        margin: 18px 0 0;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        max-width: none;
+        text-align: left;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .pop {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap nav">
+        <div class="logo">Hisobchi AI <span>Business</span></div>
+        <button class="btn js-cta">Sinab ko'rish</button>
+      </div>
+    </header>
+
+    <!-- ============ BLOK 1 — HERO ============ -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div>
+          <h1>
+            Telegram'dagi AI hisobchingiz. Savdo — ovoz bilan, hisobot — bir
+            savol bilan.
+          </h1>
+          <p class="sub">
+            Do'kon va savdo bizneslari uchun. Xodimingiz ovozli xabar yuboradi —
+            savdo yoziladi. Siz so'raysiz — javob olasiz. Hech qanday dastur
+            o'rnatilmaydi.
+          </p>
+
+          <form class="lead-form js-lead-form" id="form-hero" novalidate>
+            <input
+              type="text"
+              name="name"
+              placeholder="Ismingiz"
+              required
+              autocomplete="name"
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="+998 90 123 45 67"
+              required
+              autocomplete="tel"
+              inputmode="tel"
+            />
+            <select name="activityType" required>
+              <option value="" disabled selected>Biznes turini tanlang</option>
+              <option value="Do'kon">Do'kon</option>
+              <option value="Restoran">Restoran / Kafe</option>
+              <option value="Ulgurji savdo">Ulgurji savdo</option>
+              <option value="Xizmat ko'rsatish">Xizmat ko'rsatish</option>
+              <option value="Boshqa">Boshqa</option>
+            </select>
+            <input
+              type="text"
+              name="activityTypeOther"
+              placeholder="Biznes turingizni yozing"
+              class="js-activity-other"
+              style="display: none"
+            />
+            <button type="submit" class="btn btn-block">Sinab ko'rish</button>
+            <p class="form-note">
+              Raqamingizni qoldiring — 2 soat ichida o'zimiz qo'ng'iroq qilamiz.
+            </p>
+            <div class="form-success">
+              <div class="check">✓</div>
+              <p>
+                Rahmat! Arizangiz qabul qilindi.<br />2 soat ichida o'zimiz
+                qo'ng'iroq qilamiz.
+              </p>
+            </div>
+          </form>
+        </div>
+
+        <div class="step-visual">
+          <div class="chip c-tl">🎙 Ovozli xabar</div>
+          <div class="chip c-mr">✅ Savdo yozildi</div>
+          <div class="chip c-bl">📊 Javob 3 soniyada</div>
+          <img
+            class="phone-shot"
+            src="assets/mock-sale-debt.webp"
+            width="272"
+            height="551"
+            alt="Telegram botga ovozli xabar bilan sotuv va qarz yozib qo'yish"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BLOK 2 — OG'RIQ ============ -->
+    <section class="alt">
+      <div class="wrap">
+        <h2>Har kuni shu ahvolmi?</h2>
+        <div class="cards">
+          <div class="card pain-card">
+            <div class="pain-mark">✕</div>
+            <div>
+              Kechqurun kassa hisobi bir soat oladi — raqamlar baribir to'g'ri
+              kelmaydi
+            </div>
+          </div>
+          <div class="card pain-card">
+            <div class="pain-mark">✕</div>
+            <div>Kim qancha qarz — daftarda, xotirada, har xil joyda</div>
+          </div>
+          <div class="card pain-card">
+            <div class="pain-mark">✕</div>
+            <div>
+              «Bugun qancha sotdik?» — xodimga qo'ng'iroq qilib so'raysiz
+            </div>
+          </div>
+          <div class="card pain-card">
+            <div class="pain-mark">✕</div>
+            <div>Oy oxirida foyda qancha — aniq hech kim bilmaydi</div>
+          </div>
+        </div>
+        <p class="pain-final">
+          Bularning hammasini <span>bitta Telegram bot</span> hal qiladi.
+        </p>
+        <div class="section-cta">
+          <button class="btn js-cta">Muammoni hal qilish</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BLOK 3 — QANDAY ISHLAYDI ============ -->
+    <section>
+      <div class="wrap">
+        <h2>Qanday ishlaydi?</h2>
+
+        <div class="step">
+          <div>
+            <div class="step-num">1</div>
+            <h3>Telegram'da botni ochasiz</h3>
+            <p>Hech narsa o'rnatilmaydi. 5 daqiqada tayyor.</p>
+          </div>
+          <div class="step-visual">
+            <div class="chip c-tr">⚡ 5 daqiqada tayyor</div>
+            <img
+              class="phone-shot phone-sm"
+              src="assets/mock-start.webp"
+              width="206"
+              height="417"
+              alt="Botga /start bosilgach telefon raqamni ulashish so'raladi"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div class="step">
+          <div>
+            <div class="step-num">2</div>
+            <h3>Xodimlar ovoz bilan yozadi</h3>
+            <p>
+              «200 kg shakar oldim, 10 mingdan» — xarid avtomatik hisobga
+              yozildi.
+            </p>
+          </div>
+          <div class="step-visual">
+            <div class="chip c-tr">✅ Avtomatik yozildi</div>
+            <img
+              class="phone-shot phone-sm"
+              src="assets/mock-purchase.webp"
+              width="206"
+              height="417"
+              alt="Ovozli xabardan avtomatik yozilgan xarid hisoboti"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div class="step">
+          <div>
+            <div class="step-num">3</div>
+            <h3>Siz savol berasiz</h3>
+            <p>«Bugun qancha savdo bo'ldi?» — javob bir zumda.</p>
+          </div>
+          <div class="step-visual">
+            <div class="chip c-tr">💬 Bir savol bilan</div>
+            <img
+              class="phone-shot phone-sm"
+              src="assets/mock-sales-query.webp"
+              width="206"
+              height="417"
+              alt="Bugungi savdo miqdori haqida bot javobi"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div class="section-cta">
+          <button class="btn js-cta">Sinab ko'rish</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BLOK 4 — IMKONIYATLAR ============ -->
+    <section class="alt">
+      <div class="wrap">
+        <h2>Biznesingiz uchun nima qiladi?</h2>
+        <div class="feat-grid">
+          <div class="card feat">
+            <h3>
+              <span class="feat-ic"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                >
+                  <path
+                    d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"
+                  />
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                  <line x1="12" y1="19" x2="12" y2="23" /></svg></span
+              >Ovozli savdo yozish
+            </h3>
+            <p>Xodim gapiradi, AI yozadi. Excel ham, daftar ham kerak emas.</p>
+          </div>
+          <div class="card feat">
+            <h3>
+              <span class="feat-ic"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                >
+                  <rect x="2" y="5" width="20" height="14" rx="2" />
+                  <line x1="2" y1="10" x2="22" y2="10" /></svg></span
+              >Qarz nazorati
+            </h3>
+            <p>
+              Har bir mijoz bo'yicha: qachon oldi, qancha qaytardi. So'mda ham,
+              dollarda ham.
+            </p>
+          </div>
+          <div class="card feat">
+            <h3>
+              <span class="feat-ic"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                >
+                  <path
+                    d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
+                  />
+                  <circle cx="12" cy="13" r="4" /></svg></span
+              >Nakladnoy skaneri
+            </h3>
+            <p>Suratga oling — 40 ta mahsulot 10 soniyada bazada.</p>
+          </div>
+          <div class="card feat">
+            <h3>
+              <span class="feat-ic"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg></span
+              >Xodimlar hisobi
+            </h3>
+            <p>
+              Kim qancha sotdi — real vaqtda. Komissiya avtomatik hisoblanadi.
+            </p>
+          </div>
+          <div class="card feat">
+            <h3>
+              <span class="feat-ic"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                >
+                  <line x1="12" y1="20" x2="12" y2="10" />
+                  <line x1="18" y1="20" x2="18" y2="4" />
+                  <line x1="6" y1="20" x2="6" y2="16" /></svg></span
+              >Foyda-zarar hisoboti
+            </h3>
+            <p>Kirim, chiqim, sof foyda — bir savol bilan.</p>
+          </div>
+          <div class="card feat">
+            <h3>
+              <span class="feat-ic"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <line x1="3" y1="9" x2="21" y2="9" />
+                  <line x1="3" y1="15" x2="21" y2="15" />
+                  <line x1="9" y1="3" x2="9" y2="21" /></svg></span
+              >Google Sheets
+            </h3>
+            <p>Barcha ma'lumotlar jadvalga avtomatik tushadi.</p>
+          </div>
+        </div>
+        <div class="section-cta">
+          <button class="btn js-cta">O'z biznesimda ko'rish</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BLOK 5 — TAQQOSLASH ============ -->
+    <section>
+      <div class="wrap">
+        <h2>Daftar. Excel. Hisobchi AI.</h2>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Daftar</th>
+                <th>Excel</th>
+                <th class="hi">Hisobchi AI</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Savdo yozish</td>
+                <td class="old">Qo'lda</td>
+                <td class="old">Kompyuterda</td>
+                <td class="hi">5 soniyalik ovoz</td>
+              </tr>
+              <tr>
+                <td>Qarz nazorati</td>
+                <td class="old">Unutiladi</td>
+                <td class="old">Kim yuritadi?</td>
+                <td class="hi">Avtomatik</td>
+              </tr>
+              <tr>
+                <td>Xodim nazorati</td>
+                <td class="old">Ishonchga</td>
+                <td class="old">Oy oxirida</td>
+                <td class="hi">Real vaqtda</td>
+              </tr>
+              <tr>
+                <td>Hisobot</td>
+                <td class="old">Yo'q</td>
+                <td class="old">O'zingiz tuzasiz</td>
+                <td class="hi">Bir savol bilan</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="section-cta">
+          <button class="btn js-cta">Sinab ko'rish</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BLOK 6 — ISHONCH ============ -->
+    <section class="alt">
+      <div class="wrap">
+        <h2>Mijozlarimiz nima deydi?</h2>
+        <div
+          class="cards"
+          style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))"
+        >
+          <div class="card">
+            <div class="quote-stars">★★★★★</div>
+            <p class="quote">
+              «Kechki hisob 1 soat olardi — endi 0 daqiqa. Hamma qarz bitta
+              ekranda.»
+            </p>
+            <p class="quote-who">— do'kon egasi, Toshkent</p>
+          </div>
+          <!-- PLACEHOLDER: replace the two cards below with real customer testimonials -->
+          <div class="card">
+            <div class="quote-stars">★★★★★</div>
+            <p class="quote">«[Mijoz fikri — real mijozdan olinadi]»</p>
+            <p class="quote-who">— [biznes turi, shahar]</p>
+          </div>
+          <div class="card">
+            <div class="quote-stars">★★★★★</div>
+            <p class="quote">«[Mijoz fikri — real mijozdan olinadi]»</p>
+            <p class="quote-who">— [biznes turi, shahar]</p>
+          </div>
+        </div>
+
+        <div class="trust-visual">
+          <div class="chip c-tl">📋 Hamma qarz bitta ekranda</div>
+          <img
+            class="phone-shot phone-sm"
+            src="assets/mock-debtors.webp"
+            width="206"
+            height="417"
+            alt="Qarzdorlar ro'yxati botdan bir savol bilan"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="section-cta">
+          <button class="btn js-cta">Men ham boshlayman</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BLOK 7 — FAQ ============ -->
+    <section>
+      <div class="wrap">
+        <h2>Ko'p so'raladigan savollar</h2>
+        <div class="faq-list">
+          <details>
+            <summary>O'rnatish qiyinmi?</summary>
+            <p>
+              Hech narsa o'rnatilmaydi. Telegram bor — Hisobchi AI ishlaydi. 5
+              daqiqada boshlaysiz.
+            </p>
+          </details>
+          <details>
+            <summary>Xodimlarim o'rgana oladimi?</summary>
+            <p>Ovozli xabar yuborishni biladimi? Demak, o'rgangan.</p>
+          </details>
+          <details>
+            <summary>Xato yozilsa-chi?</summary>
+            <p>Istalgan yozuvni tuzatish yoki o'chirish mumkin.</p>
+          </details>
+          <details>
+            <summary>Ma'lumotlarim xavfsizmi?</summary>
+            <p>
+              Ma'lumotlaringiz faqat sizga tegishli. Istalgan payt Google
+              Sheets'ga yuklab olasiz.
+            </p>
+          </details>
+          <details>
+            <summary>Dollar bilan ishlaysizlarmi?</summary>
+            <p>Ha, UZS va USD parallel yuritiladi.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BLOK 8 — YAKUNIY CTA ============ -->
+    <section class="final">
+      <div class="wrap final-inner">
+        <h2 style="margin-bottom: 0">
+          Biznesingizni tartibga solish uchun 5 daqiqa kifoya
+        </h2>
+        <form class="lead-form js-lead-form" id="form-final" novalidate>
+          <input
+            type="text"
+            name="name"
+            placeholder="Ismingiz"
+            required
+            autocomplete="name"
+          />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="+998 90 123 45 67"
+            required
+            autocomplete="tel"
+            inputmode="tel"
+          />
+          <select name="activityType" required>
+            <option value="" disabled selected>Biznes turini tanlang</option>
+            <option value="Do'kon">Do'kon</option>
+            <option value="Restoran">Restoran / Kafe</option>
+            <option value="Ulgurji savdo">Ulgurji savdo</option>
+            <option value="Xizmat ko'rsatish">Xizmat ko'rsatish</option>
+            <option value="Boshqa">Boshqa</option>
+          </select>
+          <input
+            type="text"
+            name="activityTypeOther"
+            placeholder="Biznes turingizni yozing"
+            class="js-activity-other"
+            style="display: none"
+          />
+          <button type="submit" class="btn btn-block">Sinab ko'rish</button>
+          <p class="form-note">
+            Raqamingizni qoldiring — 2 soat ichida qo'ng'iroq qilamiz, hammasini
+            o'zimiz sozlab beramiz.
+          </p>
+          <div class="form-success">
+            <div class="check">✓</div>
+            <p>
+              Rahmat! Arizangiz qabul qilindi.<br />2 soat ichida o'zimiz
+              qo'ng'iroq qilamiz.
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">© 2026 Hisobchi AI Business</div>
+    </footer>
+
+    <!-- Discount popup: shows once — after 25s on page OR 50% scroll, whichever first -->
+    <div
+      class="pop-backdrop"
+      id="pop-backdrop"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="pop-title"
+    >
+      <div class="pop">
+        <button class="pop-x" id="pop-x" aria-label="Yopish">×</button>
+        <div class="pop-ic">%</div>
+        <h3 id="pop-title">Shu oyda — maxsus chegirma</h3>
+        <p>
+          Shu oy ro'yxatdan o'tgan har bir mijozga maxsus chegirma taqdim
+          etamiz. Raqamingizni qoldiring — chegirmangizni hoziroq band qiling.
+        </p>
+        <form class="lead-form js-lead-form" id="form-popup" novalidate>
+          <input
+            type="text"
+            name="name"
+            placeholder="Ismingiz"
+            required
+            autocomplete="name"
+          />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="+998 90 123 45 67"
+            required
+            autocomplete="tel"
+            inputmode="tel"
+          />
+          <select name="activityType" required>
+            <option value="" disabled selected>Biznes turini tanlang</option>
+            <option value="Do'kon">Do'kon</option>
+            <option value="Restoran">Restoran / Kafe</option>
+            <option value="Ulgurji savdo">Ulgurji savdo</option>
+            <option value="Xizmat ko'rsatish">Xizmat ko'rsatish</option>
+            <option value="Boshqa">Boshqa</option>
+          </select>
+          <input
+            type="text"
+            name="activityTypeOther"
+            placeholder="Biznes turingizni yozing"
+            class="js-activity-other"
+            style="display: none"
+          />
+          <button type="submit" class="btn btn-block">Chegirmani olish</button>
+          <p class="form-note">2 soat ichida o'zimiz qo'ng'iroq qilamiz.</p>
+          <div class="form-success">
+            <div class="check">✓</div>
+            <p>
+              Rahmat! Arizangiz qabul qilindi.<br />2 soat ichida o'zimiz
+              qo'ng'iroq qilamiz.
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      /* ============================================================
+   CRM LEAD API
+   Every form submission is sent straight to the Hisobchi CRM:
+
+     POST https://crm.hisobchi.biz/api/leads
+     Headers: Content-Type: application/json, x-api-key: <your key>
+     Body: { "name": "...", "phone": "+998901234567", "activityType": "..." }
+
+   Replace CRM_API_KEY below with the real key from the CRM.
+   NOTE: this key is visible to anyone who views the page source —
+   only use a key that is scoped to lead submission and rate-limited
+   on the CRM side. If stricter secrecy is needed, route this request
+   through a small server-side proxy instead of calling the CRM directly.
+
+   The CRM API must also allow cross-origin requests from this site's
+   domain (Access-Control-Allow-Origin), otherwise the browser will
+   block the fetch call below.
+   ============================================================ */
+      var CRM_API_URL = "https://crm.hisobchi.biz/api/leads";
+      var CRM_API_KEY = "pgKnDkebLKt7RYRFr0s0-_l7j96F47Y0";
+
+      /* CTA buttons scroll to the nearest form */
+      document.querySelectorAll(".js-cta").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var hero = document.getElementById("form-hero");
+          var fin = document.getElementById("form-final");
+          var y = btn.getBoundingClientRect().top;
+          var target =
+            Math.abs(hero.getBoundingClientRect().top - y) <=
+            Math.abs(fin.getBoundingClientRect().top - y)
+              ? hero
+              : fin;
+          target.scrollIntoView({ behavior: "smooth", block: "center" });
+          setTimeout(function () {
+            target
+              .querySelector('input[name="name"]')
+              .focus({ preventScroll: true });
+          }, 600);
+        });
+      });
+
+      /* Phone: force +998 prefix, digits only, auto-format */
+      document.querySelectorAll('input[name="phone"]').forEach(function (inp) {
+        inp.addEventListener("focus", function () {
+          if (!inp.value) inp.value = "+998 ";
+        });
+        inp.addEventListener("input", function () {
+          var d = inp.value.replace(/\D/g, "");
+          if (d.indexOf("998") !== 0) d = "998" + d.replace(/^998/, "");
+          d = d.slice(0, 12);
+          var out = "+998";
+          if (d.length > 3) out += " " + d.slice(3, 5);
+          if (d.length > 5) out += " " + d.slice(5, 8);
+          if (d.length > 8) out += " " + d.slice(8, 10);
+          if (d.length > 10) out += " " + d.slice(10, 12);
+          inp.value = out;
+        });
+      });
+
+      /* Activity type: show a free-text field when "Boshqa" is chosen */
+      document
+        .querySelectorAll('select[name="activityType"]')
+        .forEach(function (sel) {
+          var other = sel.parentElement.querySelector(
+            'input[name="activityTypeOther"]'
+          );
+          sel.addEventListener("change", function () {
+            if (sel.value === "Boshqa") {
+              other.style.display = "block";
+              other.focus();
+            } else {
+              other.style.display = "none";
+              other.style.borderColor = "";
+              other.value = "";
+            }
+          });
+        });
+
+      /* Submit */
+      document.querySelectorAll(".js-lead-form").forEach(function (form) {
+        form.addEventListener("submit", function (ev) {
+          ev.preventDefault();
+          var name = form.querySelector('input[name="name"]');
+          var phone = form.querySelector('input[name="phone"]');
+          var activityType = form.querySelector('select[name="activityType"]');
+          var activityTypeOther = form.querySelector(
+            'input[name="activityTypeOther"]'
+          );
+          var digits = phone.value.replace(/\D/g, "");
+          if (!name.value.trim()) {
+            name.style.borderColor = "#D64545";
+            name.focus();
+            return;
+          }
+          name.style.borderColor = "";
+          if (digits.length !== 12) {
+            phone.style.borderColor = "#D64545";
+            phone.focus();
+            return;
+          }
+          phone.style.borderColor = "";
+          if (!activityType.value) {
+            activityType.style.borderColor = "#D64545";
+            activityType.focus();
+            return;
+          }
+          activityType.style.borderColor = "";
+          var finalActivityType = activityType.value;
+          if (activityType.value === "Boshqa") {
+            if (!activityTypeOther.value.trim()) {
+              activityTypeOther.style.borderColor = "#D64545";
+              activityTypeOther.focus();
+              return;
+            }
+            activityTypeOther.style.borderColor = "";
+            finalActivityType = activityTypeOther.value.trim();
+          }
+
+          var btn = form.querySelector('button[type="submit"]');
+          var origText = btn.textContent;
+          btn.disabled = true;
+          btn.textContent = "Yuborilmoqda...";
+
+          var done = function () {
+            form
+              .querySelectorAll("input, select, button, .form-note")
+              .forEach(function (el) {
+                el.style.display = "none";
+              });
+            form.querySelector(".form-success").style.display = "block";
+            if (typeof fbq === "function") fbq("track", "Lead");
+            try {
+              localStorage.setItem("hisobchi_pop", "1");
+            } catch (e) {}
+            if (form.id === "form-popup") {
+              setTimeout(closePop, 2500);
+            }
+          };
+
+          fetch(CRM_API_URL, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "x-api-key": CRM_API_KEY,
+            },
+            body: JSON.stringify({
+              name: name.value.trim(),
+              phone: "+" + digits,
+              activityType: finalActivityType,
+            }),
+          })
+            .then(function (res) {
+              if (!res.ok) throw new Error("CRM javobi: " + res.status);
+              done();
+            })
+            .catch(function (err) {
+              console.error("Lead CRM API xatosi:", err);
+              btn.disabled = false;
+              btn.textContent = origText;
+              alert("Xatolik yuz berdi. Iltimos, qayta urinib ko'ring.");
+            });
+        });
+      });
+
+      /* ===== Discount popup: 25s on page OR 50% scroll, once per visitor ===== */
+      var popBackdrop = document.getElementById("pop-backdrop");
+      var popOpened = false;
+
+      function popAllowed() {
+        try {
+          return !localStorage.getItem("hisobchi_pop");
+        } catch (e) {
+          return true;
+        }
+      }
+      function openPop() {
+        if (popOpened || !popAllowed()) return;
+        /* don't interrupt someone already typing in a form — retry shortly */
+        var ae = document.activeElement;
+        if (ae && (ae.tagName === "INPUT" || ae.tagName === "TEXTAREA")) {
+          setTimeout(openPop, 10000);
+          return;
+        }
+        popOpened = true;
+        popBackdrop.classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+      function closePop() {
+        popBackdrop.classList.remove("open");
+        document.body.style.overflow = "";
+        try {
+          localStorage.setItem("hisobchi_pop", "1");
+        } catch (e) {}
+      }
+
+      /* trigger 1: 25 seconds on page */
+      setTimeout(openPop, 25000);
+
+      /* trigger 2: scrolled 50% of the page */
+      window.addEventListener(
+        "scroll",
+        function onScroll() {
+          var max = document.documentElement.scrollHeight - window.innerHeight;
+          if (max > 0 && window.scrollY / max >= 0.5) {
+            window.removeEventListener("scroll", onScroll);
+            openPop();
+          }
+        },
+        { passive: true },
+      );
+
+      document.getElementById("pop-x").addEventListener("click", closePop);
+      popBackdrop.addEventListener("click", function (e) {
+        if (e.target === popBackdrop) closePop();
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && popBackdrop.classList.contains("open"))
+          closePop();
+      });
+    </script>
+  </body>
 </html>
