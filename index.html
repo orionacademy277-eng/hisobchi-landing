@@ -819,7 +819,7 @@ fbq('track', 'PageView');
             <input
               type="text"
               name="activityTypeOther"
-              placeholder="Biznes turingizni yozing"
+              placeholder="Biznesingiz turini yozing"
               class="js-activity-other"
               style="display: none"
             />
@@ -1395,7 +1395,7 @@ fbq('track', 'PageView');
         .querySelectorAll('select[name="activityType"]')
         .forEach(function (sel) {
           var other = sel.parentElement.querySelector(
-            'input[name="activityTypeOther"]'
+            'input[name="activityTypeOther"]',
           );
           sel.addEventListener("change", function () {
             if (sel.value === "Boshqa") {
@@ -1417,7 +1417,7 @@ fbq('track', 'PageView');
           var phone = form.querySelector('input[name="phone"]');
           var activityType = form.querySelector('select[name="activityType"]');
           var activityTypeOther = form.querySelector(
-            'input[name="activityTypeOther"]'
+            'input[name="activityTypeOther"]',
           );
           var digits = phone.value.replace(/\D/g, "");
           if (!name.value.trim()) {
